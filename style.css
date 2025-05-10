@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  font-size: 10px;
+  font-family: "Lobster", cursive;
+}
+
+body {
+  background: #180A0A;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  padding: 4rem 0;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.topContent {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 4.5rem;
+  padding-bottom: 2.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #ff155f;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  padding-bottom: 1.5rem;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.imgBox {
+  width: 280px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 0.5rem 5rem;
+  border: 10px solid #fff;
+  box-shadow: 0 0 25px -10px #ff155f, 0 0 20px #ff155f inset;
+  animation: imgAnim 1s ease-in-out infinite alternate;
+  animation-delay: calc(0.5s * var(--i));
+}
+
+@keyframes imgAnim {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.imgBox img {
+  width: 105%;
+  height: 105%;
+  object-fit: cover;
+}
+
+.heartWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heartWrapper i {
+  font-size: 15rem;
+  color: #f90b57;
+  text-shadow: 0 0 10rem #f90b57;
+  position: absolute;
+  bottom: -100%;
+  transform: scale(0);
+  animation: heartAnim 4s linear infinite;
+  animation-delay: calc(0.5s * var(--j));
+}
+
+@keyframes heartAnim {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Heart positions */
+.heartWrapper i:nth-child(1) { left: 2%; }
+.heartWrapper i:nth-child(2) { left: 10%; }
+.heartWrapper i:nth-child(3) { left: 15%; }
+.heartWrapper i:nth-child(4) { left: 20%; }
+.heartWrapper i:nth-child(5) { left: 25%; }
+.heartWrapper i:nth-child(6) { left: 35%; }
+.heartWrapper i:nth-child(7) { left: 45%; }
+.heartWrapper i:nth-child(8) { left: 55%; }
+.heartWrapper i:nth-child(9) { left: 65%; }
+.heartWrapper i:nth-child(10) { left: 75%; }
+
+.heartWrapper i:nth-child(11) { right: 2%; }
+.heartWrapper i:nth-child(12) { right: 10%; }
+.heartWrapper i:nth-child(13) { right: 15%; }
+.heartWrapper i:nth-child(14) { right: 20%; }
+.heartWrapper i:nth-child(15) { right: 25%; }
+.heartWrapper i:nth-child(16) { right: 35%; }
+.heartWrapper i:nth-child(17) { right: 45%; }
+.heartWrapper i:nth-child(18) { right: 55%; }
+.heartWrapper i:nth-child(19) { right: 65%; }
+.heartWrapper i:nth-child(20) { right: 75%; }
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 8px;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .imgBox {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+}
