@@ -41,7 +41,12 @@ h2 {
   text-transform: uppercase;
   text-shadow: 0 0 10px #ff155f;
 }
-
+h3 {
+  font-size: 4.5rem;
+  padding-bottom: 2.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fffb15;
+}
 p {
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
