@@ -99,7 +99,7 @@ p {
 }
 
 .heartWrapper i {
-  font-size: 15rem;
+  font-size: 15px;
   color: #f90b57;
   text-shadow: 0 0 10rem #f90b57;
   position: absolute;
@@ -161,4 +161,69 @@ p {
     height: auto;
     aspect-ratio: 3 / 4;
   }
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.floatingHearts i {
+  position: fixed;
+  bottom: -10px;
+  color: rgb(228, 14, 50);
+  font-size: 40px;
+  animation: floatUp 5s infinite;
+  opacity: 0;
+}
+
+.floatingHearts i:nth-child(odd) {
+  left: calc(100% * var(--k) / 20);
+  animation-delay: calc(var(--k) * 0.3s);
+}
+.wedsLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.wedsLink a {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  color: #e84393;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px dashed #d5fe07;
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.wedsLink a:hover {
+  background-color: #ffeef4;
+  color: #d63031;
 }
